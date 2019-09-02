@@ -66,16 +66,16 @@ public class A1Adept {
 		
 		for (int p = 0; p<totals.length; p++) {
 			if (totals[p]==(highest)) {
-				System.out.println("Biggest: " + firstNames[p] + " " + lastNames[p] + "(" + String.format("%.2f", highest) + ")\n");
+				System.out.println("Biggest: " + firstNames[p] + " " + lastNames[p] + " (" + String.format("%.2f", highest) + ")");
 			}
 		}
 		
 		for (int q = 0; q<totals.length; q++) {
 			if (totals[q]==(lowest)) {
-				System.out.println("Smallest: " + firstNames[q] + " " + lastNames[q] + "(" + String.format("%.2f", lowest) + ")\n");
+				System.out.println("Smallest: " + firstNames[q] + " " + lastNames[q] + " (" + String.format("%.2f", lowest) + ")");
 			}
 		}
-		System.out.println("Average: " + String.format("%.2f", average)+"\n");
+		System.out.println("Average: " + String.format("%.2f", average));
 	}
 	
 	static double totalsAverage(double[] totals) {
