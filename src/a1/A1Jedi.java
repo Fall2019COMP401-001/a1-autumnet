@@ -1,7 +1,6 @@
 package a1;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class A1Jedi {
 
@@ -32,6 +31,7 @@ public class A1Jedi {
 			String last = scan.next();
 			int quantity = scan.nextInt();
 			//System.out.println(quantity);
+			// Loop through products and quantities for each customer and add them to next empty array
 			for (int k=0; k<quantity; k++) {
 				howMany[k+sum] = scan.nextInt();
 				whichOne[k+sum] = scan.next();
