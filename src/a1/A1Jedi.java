@@ -1,6 +1,7 @@
 package a1;
 
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class A1Jedi {
 
@@ -20,10 +21,11 @@ public class A1Jedi {
 		}
 		
 		int customerCount = scan.nextInt();
-		int[] totalQuants = {0,0,0,0,0,0};
-		int[] peoples = {0,0,0,0,0,0};		
+		int[] totalQuants = new int[productCount];
+		int[] peoples = new int[productCount];		
 		int[] howMany = new int[productCount];
 		String[] whichOne = new String[productCount];
+		int sum = 0;
 		
 		for (int j=0; j<customerCount; j++) {
 			String first = scan.next();
@@ -31,14 +33,13 @@ public class A1Jedi {
 			int quantity = scan.nextInt();
 			//System.out.println(quantity);
 			for (int k=0; k<quantity; k++) {
-				//howMany[k] = scan.nextInt();
-				int many = scan.nextInt();
-				String which = scan.next();
-				whichOne[k] = which;
-				howMany[k] = many;
-				//System.out.println(howMany[k] + whichOne[k]);
-				//System.out.println(many + " " + which);
+				howMany[k+sum] = scan.nextInt();
+				whichOne[k+sum] = scan.next();
+
+				//System.out.println(Arrays.toString(howMany));
+				//System.out.println(Arrays.toString(whichOne));
 			}
+			sum += quantity;
 		}
 				
 		for (int x=0; x<productCount; x++) {
@@ -59,7 +60,12 @@ public class A1Jedi {
 		}
 		
 		for (int p = 0; p<productCount; p++) {
+			if (peoples[p] == 0) {
+				System.out.println("No customers bought " + products[p]);
+			}
+			else {
 			System.out.println(peoples[p]+ " customers bought " + totalQuants[p] + " " + products[p]);
+			}
 		}
 		//Read in the number of products 
 		
