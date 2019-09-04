@@ -66,9 +66,9 @@ public class A1Jedi {
 			//System.out.println(sum);
 			
 		}
-		for (int x=0; x<productCount; x++) {
+		/*for (int x=0; x<productCount; x++) {
 			System.out.println(totalQuants[x] + " " + peoples[x]);
-		}
+		}*/
 		/*for (int x=0; x<productCount; x++) {
 			int total = 0; 
 			int people = 0; 
